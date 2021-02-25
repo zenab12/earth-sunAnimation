@@ -1,0 +1,152 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>earth and sun animation</title>
+
+    <style>
+            @font-face {
+                font-family:Long Cang;
+                src:url(./fonts/LongCang-Regular.ttf);
+            }
+            body {
+                    perspective:3000px;
+                    box-sizing: border-box;
+                    height: 2000px;
+                    margin:20% 50%;
+
+            }
+       
+            .sun{
+                background: linear-gradient(orange,yellow);
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                position: absolute;
+                z-index: 1;
+                margin: 40px auto;
+
+            }
+            .earth {
+                
+                background:linear-gradient(blue,green,white);
+                width: 50px;
+                height: 50px;
+                position: absolute;
+                border-radius: 50%;
+                z-index: 2;
+                margin: -20px auto;
+                animation: round 2s ease-in-out infinite;
+                transition: all 1s linear;
+            }
+
+            .cont1:hover .earth {
+                transform: rotate(360deg);
+            }
+
+            @keyframes round {
+                0% {   left: 0;
+                       transform: rotate(360deg);}
+                3%{
+                    left: 20px;}
+                5%{
+                    left: 40px;}
+                10%{    left: 60px;}
+
+                15%{
+                    left: 80px; }
+                20% {
+                    left: 100px;
+                    top: 10px; }
+                25% {
+                    top: 20px;
+                    left: 105px;}
+                30% {
+                    top: 30px;
+                     left: 110px; }
+                35% {
+                    top: 40px;
+                    left: 115px; }
+                40% {
+                    top: 50px;
+                    left: 120px; }
+
+                45%{
+                       top: 60px;
+                       left: 125px;}
+                  
+                50% {
+                    top:100px;
+                    left: 130px;
+                }
+                55%{ 
+                         top:120px;
+                         left: 130px;
+                }
+                60%{
+                    top:140px;
+                    left: 90px;
+                }
+                65%{
+                    top: 150px;
+                    left: 80px;
+                }
+                70%{
+                    top: 160px;
+                    left: 60px;
+                }
+                75%{
+                    top: 170px;
+                    left: 50px;
+                }
+                80%{
+                    top: 175px;
+                    left: 40px;
+                }
+                85% {
+                    top: 180px;
+                    left: 30px;
+                }
+                87%{
+                    top: 160px;
+                }
+                90%{
+                    left:-40px;
+                    top: 140px;
+                }
+                93%{
+                    top: 120px;
+                }
+                95%{
+                    left: -50px;
+                    top: 100px;
+                }
+                97%{
+                    top: 50px;
+                }
+                98%{
+                    top: 30px;
+                }
+                99%{
+                    top: 20px;
+                }
+                100%{
+                    left: -60px;
+                    top: 0px;
+                }
+
+            }
+            
+        </style>
+    </head>
+    <body>
+
+        <!--animation-->
+        <div class="cont1">
+            <div class="sun"></div>
+            <div class="earth"></div>
+        </div>
+    
+</body>
+</html>
